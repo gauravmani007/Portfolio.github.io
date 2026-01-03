@@ -78,6 +78,17 @@ a{
     width: 100%;
 }
 
+/*Hide inside dot by default */
+.sidebar .close-btn{
+align-self: flex-end;
+cursore: pointer;    
+}
+
+/*Hide outside dot when sidebar is open */
+
+.sidebar.active ~ ul .menubtn{
+display: none;
+}
 
 .menubtn {
   position: relative;
@@ -807,4 +818,5 @@ a{
 .contact-input::placeholder{
 color: aqua;
 }
+
 
