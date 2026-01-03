@@ -2,12 +2,18 @@
 
 function showSidebar() {
   const sidebar = document.querySelector('.sidebar');
-  sidebar.classList.add('active');
+  const menuBtn = document.querySelector('.menubtn');
 
+  sidebar.classList.add('active');
+  menuBtn.style.display = 'none' /// hide outsude dot
 }
+
 function hideSidebar() {
   const sidebar = document.querySelector('.sidebar');
+  const menuBtn = document.querySelector('.menubtn');
+  
   sidebar.classList.remove('active');
+  menuBtn.style.display = 'block'; // show outside dot
 }
 
 // Optional: Close sidebar when clicking outside (you can keep this)
@@ -271,3 +277,4 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     formStatus.style.color = 'green';
   });
 });
+
