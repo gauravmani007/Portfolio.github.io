@@ -70,7 +70,7 @@ const ACHIEVEMENTS = [
   { icon: "bx-trophy", value: 450, suffix: "+", label: "LeetCode problems solved" },
   { icon: "bx-certification", value: 3, suffix: "", label: "Certifications: SQL, Python, Palo Alto Cybersecurity" },
   { icon: "bx-folder-open", value: PROJECTS.length, suffix: "", label: "Projects built" },
-  { icon: "bx-book-open", value: 7.3, suffix: "/10", label: "CGPA, B.Tech CSE (AI)" }
+  { icon: "bx-book-open", value: 7.6, suffix: "/10", label: "CGPA, B.Tech CSE (AI)" }
 ];
 /* ===================================================================== */
 
@@ -152,7 +152,7 @@ const achObs = new IntersectionObserver((entries, obs) => entries.forEach(en => 
   const t0 = performance.now();
   (function tick(t) {
     const k = Math.min((t - t0) / 1200, 1);
-    el.textContent = Math.round(to * k);
+    el.textContent = Number.isInteger(to) ? Math.round(to * k) : (to * k).toFixed(1);
     if (k < 1) requestAnimationFrame(tick);
   })(t0);
 }), { threshold: 0.4 });
