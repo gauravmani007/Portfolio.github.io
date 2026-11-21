@@ -1,299 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>My Portfolio</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Gaurav Mani | Portfolio</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="dynamic.css">
 </head>
-
 <body>
 
-  <nav class="navbar">
-    <a href="#" class="logo">Portfolio.</a>
-    
-    <ul class="sidebar">
-      <li onclick=hideSidebar() class="close-btn"><a href="#"><i class="bi bi-three-dots-vertical"></i></a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#Project">Projects</a></li>
-      <li><a href="#Contact">Contact</a></li>
-   </ul>  
-    <ul>
-      <li class="hideOnMobile active"><a href="#">Home</a></li>
-      <li class="hideOnMobile"><a href="#about">About</a></li>
-      <li class="hideOnMobile"><a href="#skills">Skills</a></li>
-      <li class="hideOnMobile"><a href="#Project">Projects</a></li>
-      <li class="hideOnMobile"><a href="#Contact">Contact</a></li>
-      <li class="menubtn" onclick= "showSidebar()"><a href="#"><i class="bi bi-three-dots-vertical"></i></a></li>
-   </ul>  
-    </nav>
-  
-    <!-- Home -->
-    <section class="home">
-       <div class="home-img">
-            <div class="img-box">
-              <div class="img-item">
-                <img src="new image'.jpg" alt="Profile Image">
-              </div>
-            </div>
-        </div>
-      <div class="home-info">
-        <h1>Gaurav Mani</h1>
-        <h2>I'm a 
-          <span style="--i:3;">Problem Solver</span>
-          <span style="--i:2;">Frontend Developer</span>
-          <span style="--i:1;">Developer</span>
-        </h2>
-         <p>Hi, My name is Gaurav Mani. I am 20 years old. I am from India. Currently working as a Full Stack Developer and learning Data Structures and Algorithms. As far as my hobbies are concerned, i like to read books, listening music, making Arts and crafts.
-          
-          My short-term goal is to work as freelancer and and get a job in a reputed comapany. While my long term goal is to achieve a good position in same comapany.
-          
-          For more Details Please scroll down or visit above lists.</p>
-          
-         <p> "The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart." — Helen Keller</p>
-    
-          <div class="btn-sci">
-          <a href="#" class="btn">More About Me</a>
-            <div class="sci">
-                <a href="https://github.com/RoyGrover154"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/gaurav-mani027"><i class='bx bxl-linkedin'></i></a>
-            </div>    
-          </div>
-        </div>
-  
-       
-    </section>
+<nav class="navbar">
+  <a href="#" class="logo">Portfolio.</a>
+  <ul class="sidebar">
+    <li onclick=hideSidebar() class="close-btn"><a href="#"><i class="bi bi-three-dots-vertical"></i></a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#Project">Projects</a></li>
+    <li><a href="#Achievements">Achievements</a></li>
+    <li><a href="#Contact">Contact</a></li>
+  </ul>
+  <ul>
+    <li class="hideOnMobile active"><a href="#">Home</a></li>
+    <li class="hideOnMobile"><a href="#about">About</a></li>
+    <li class="hideOnMobile"><a href="#skills">Skills</a></li>
+    <li class="hideOnMobile"><a href="#Project">Projects</a></li>
+    <li class="hideOnMobile"><a href="#Achievements">Achievements</a></li>
+    <li class="hideOnMobile"><a href="#Contact">Contact</a></li>
+    <li class="menubtn" onclick="showSidebar()"><a href="#"><i class="bi bi-three-dots-vertical"></i></a></li>
+  </ul>
+</nav>
 
+<!-- Home -->
+<section class="home">
+  <div class="home-img">
+    <div class="img-box">
+      <div class="img-item">
+        <img src="profile.jpg" alt="Profile Image">
+      </div>
+    </div>
+  </div>
+  <div class="home-info">
+    <h1>Gaurav Mani</h1>
+    <h2>I'm a <span class="typed" id="typed-role">Full Stack Developer</span><span class="cursor" aria-hidden="true">|</span></h2>
+    <p>Hi, I'm Gaurav Mani, a B.Tech Computer Science (AI) student from India. I build AI-powered web apps with React, Node.js and GenAI APIs, and I practice DSA regularly (450+ LeetCode problems solved).
+    My short-term goal is to work as a freelancer and land a role at a reputed company; long term, I want to grow into a leadership position there.
+    Scroll down to see my skills, projects and achievements.</p>
+    <p>"The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart." — Helen Keller</p>
+    <div class="btn-sci">
+      <a href="#about" class="btn">More About Me</a>
+      <a href="Gaurav_Mani_Resume.pdf" class="btn btn-alt" download>Resume <i class='bx bx-download'></i></a>
+      <div class="sci">
+        <a href="https://github.com/gauravmani007" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/gaurav-mani027" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+  </div>
+</section>
 
- <!-- Skill section -->
+<!-- About -->
+<section id="about">
+  <h1 class="section-heading"><span>About Me</span></h1>
+  <div class="about-grid">
+    <div class="about-card">
+      <h3><i class='bx bx-user'></i> Who I am</h3>
+      <p>I'm Gaurav Mani, a B.Tech Computer Science (AI) student from Greater Noida, India. I build AI-powered web apps with React, Node.js and GenAI APIs, and I sharpen my problem-solving with DSA (450+ LeetCode problems solved).</p>
+      <p>Short term, I want to freelance and join a reputed company; long term, I want to grow into a leadership role there.</p>
+      <div class="about-chips"><span>Reading books</span><span>Music</span><span>Arts &amp; crafts</span></div>
+    </div>
+    <div class="about-card">
+      <h3><i class='bx bx-book-open'></i> Education</h3>
+      <div class="timeline-item"><strong>B.Tech, Computer Science &amp; Engineering (AI)</strong>
+        <p>G.L. Bajaj Institute of Technology and Management</p><span>2023 – 2027 · CGPA 7.3/10</span></div>
+      <h3 class="about-sub"><i class='bx bx-certification'></i> Certifications</h3>
+      <ul class="about-list"><li>SQL and Python (Scaler, Kaggle)</li><li>Palo Alto Networks Cybersecurity Foundation</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- Skills (rendered from SKILLS in dynamic.js) -->
 <section id="skills">
   <h1 class="section-heading">
     <span>My Skills</span>
     <div class="skill-orb"></div>
   </h1>
-
-  <div class="skills-container">
-    <div class="skill-category">
-      <div class="skill-header">
-        <i class='bx bx-code-alt'></i>
-        <h2 class="skills-sub-title">Web Development</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item" data-skill="95">
-          <div class="skill-icon">
-            <i class='bx bxl-html5'></i>
-          </div>
-          <div class="skill-info">
-            <h3>HTML5</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div>
-        <!-- Repeat for other skills -->
-        <div class="skill-item" data-skill="90">
-          <div class="skill-icon">
-            <i class='bx bxl-css3'></i>
-          </div>
-          <div class="skill-info">
-            <h3>CSS3</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div>
-        <div class="skill-item" data-skill="85">
-          <div class="skill-icon">
-            <i class='bx bxl-javascript'></i>
-          </div>
-          <div class="skill-info">
-            <h3>JavaScript</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div>
-        <div class="skill-item" data-skill="80">
-          <div class="skill-icon">
-            <i class='bx bxl-react'></i>
-          </div>
-          <div class="skill-info">
-            <h3>React</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="skill-category">
-      <div class="skill-header">
-        <i class='bx bx-data'></i>
-        <h2 class="skills-sub-title">Data Structures & Algorithms</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item" data-skill="85">
-          <div class="skill-icon">
-            <i class='bx bx-list-ul'></i>
-          </div>
-          <div class="skill-info">
-            <h3>Arrays</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div>
-        <!-- Repeat for other DSA skills -->
-        <div class="skill-item" data-skill="75">
-          <div class="skill-icon">
-            <i class='bx bx-network-chart'></i>
-          </div>
-          <div class="skill-info">
-            <h3>Linked List</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div>
-        <div class="skill-item" data-skill="70">
-          <div class="skill-icon">
-            <i class='bx bx-layer'></i>
-          </div>
-          <div class="skill-info">
-            <h3>Stacks & Queue</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div>
-        <!-- <div class="skill-item" data-skill="65">
-          <div class="skill-icon">
-            <i class='bx bx-branch'></i>
-          </div>
-          <div class="skill-info">
-            <h3>Binary Trees</h3>
-            <div class="skill-bar">
-              <div class="skill-progress"></div>
-            </div>
-            <span class="skill-percent">0%</span>
-          </div>
-        </div> -->
-      </div>
-    </div>
-  </div>
+  <div class="skills-container" id="skills-root"></div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects (rendered from PROJECTS in dynamic.js) -->
 <section id="Project">
   <h1 class="section-heading">
     <span>My Projects</span>
     <div class="project-orb"></div>
   </h1>
+  <div class="project-filters" id="project-filters"></div>
+  <div class="project-grid" id="project-grid"></div>
+</section>
 
-  <div class="project-grid">
-    <div class="project-card">
-      <div class="project-img-container">
-        <img src="my portfolio.png" alt="Project 1 Thumbnail" class="project-img">
-        <div class="project-links">
-          <a href="https://roygrover154.github.io/Portfolio.github.io/" class="project-link"><i class='bx bx-link-external'></i></a>
-          <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-        </div>
-      </div>
-      <div class="project-content">
-        <h3>Personal Portfolio</h3>
-        <p>A responsive personal portfolio built with HTML, CSS, and JavaScript showcasing my work and skills.</p>
-        <div class="project-tech">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-      </div>
-    </div>
-
-     <div class="project-card">
-      <div class="project-img-container">
-        <img src="food recipe.png" alt="Project 2 Thumbnail" class="project-img">
-        <div class="project-links">
-          <a href="https://roygrover154.github.io/Portfolio.github.io/" class="project-link"><i class='bx bx-link-external'></i></a>
-          <a href="https://github.com/RoyGrover154/Find_Recipes" class="project-link"><i class='bx bxl-github'></i></a>
-        </div>
-      </div>
-      <div class="project-content">
-        <h3>Find Recipe</h3>
-         <p>Amazing Website to find delicious recipes</p>
-        <div class="project-tech">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>API</span>
-        </div>
-      </div>
-     </div>   
-          
-
-    <div class="project-card">
-      <div class="project-img-container">
-        <img src="Wings music.png" alt="Project 3 Thumbnail" class="project-img">
-        <div class="project-links">
-          <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
-          <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-        </div>
-      </div>
-      <div class="project-content">
-        <h3>Wings Music</h3>
-        <p>Dynamic  amazing looking Music Player using HTML CSS and JavaScript </p>
-        <div class="project-tech">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- Achievements -->
+<section id="Achievements">
+  <h1 class="section-heading"><span>Achievements</span></h1>
+  <div class="achievement-grid" id="achievement-grid"></div>
 </section>
 
 <!-- Contact me -->
 <section id="Contact">
-  <h1 class="section-heading">
-    <span>Get In Touch</span>
-  </h1>
-
+  <h1 class="section-heading"><span>Get In Touch</span></h1>
   <div class="contact-container">
     <div class="contact-info">
       <div class="contact-info-item">
         <i class='bx bx-envelope'></i>
-        <div>
-          <h3>Email</h3>
-          <p>gauravmishra0227@gmail.com</p>
-        </div>
+        <div><h3>Email</h3><p>gauravmani0007@gmail.com</p></div>
+      </div>
+      <div class="contact-info-item">
+        <i class='bx bxl-linkedin'></i>
+        <div><h3>LinkedIn</h3><p><a href="https://www.linkedin.com/in/gaurav-mani027" target="_blank" rel="noopener noreferrer">linkedin.com/in/gaurav-mani027</a></p></div>
       </div>
       <div class="contact-info-item">
         <i class='bx bx-map'></i>
-        <div>
-          <h3>Location</h3>
-          <p>Greater Noida, Uttar Pradesh, India</p>
-        </div>
+        <div><h3>Location</h3><p>Greater Noida, Uttar Pradesh, India</p></div>
       </div>
     </div>
 
     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
       <input type="hidden" name="access_key" value="bfc43637-abd0-4be2-b836-69155503b080">
       <input type="hidden" name="subject" value="New Submission from Portfolio">
-      <input type="hidden" name="redirect" value="https://yourportfolio.com/thank-you.html">
       <input type="hidden" name="from_name" value="Portfolio Contact Form">
       <input type="checkbox" name="botcheck" style="display: none;">
-      
       <div class="contact-group">
         <div class="input-group">
           <input type="text" name="name" required placeholder=" " class="contact-input" id="name">
@@ -306,35 +140,36 @@
           <span class="error-message" id="email-error"></span>
         </div>
       </div>
-
       <div class="input-group">
         <textarea name="message" required placeholder=" " class="contact-input" id="message"></textarea>
         <label for="message">Your Message</label>
         <span class="error-message" id="message-error"></span>
       </div>
-
       <button type="submit" class="btn-contact">
         <span>Send Message</span>
         <i class='bx bx-send'></i>
       </button>
-      
       <div class="form-status" id="form-status"></div>
     </form>
   </div>
 </section>
 
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Gaurav Mani · Built with HTML, CSS &amp; JavaScript</p>
+  <a href="#" class="to-top" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+</footer>
 
+<!-- Project details modal -->
+<div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
 
 <script src="https://unpkg.com/scrollreveal"></script>
-<script src="style.js">
-  
-
-</script>
+<!-- dynamic.js must load BEFORE style.js so the skill bars exist when they animate -->
+<script src="dynamic.js"></script>
+<script src="style.js"></script>
 </body>
 </html>
-
-
-
-
-
-

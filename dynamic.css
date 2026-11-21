@@ -1,0 +1,65 @@
+/* Additions only. Load AFTER style.css. Matches the green (#7bf03d) / black theme. */
+.project-filters { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin: 0 0 2.5rem; position: relative; z-index: 1; }
+.filter-chip { background: transparent; color: #7bf03d; border: 1px solid rgba(123,240,61,.5); border-radius: 40px;
+  padding: .5rem 1.4rem; font-size: .95rem; cursor: pointer; transition: .3s; }
+.filter-chip:hover, .filter-chip.active { background: #7bf03d; color: #000; box-shadow: 0 0 10px rgba(123,240,61,.4); }
+.filter-chip:focus-visible, .details-btn:focus-visible, .modal-close:focus-visible { outline: 2px solid #7bf03d; outline-offset: 3px; }
+
+.project-placeholder { width: 100%; height: 100%; display: grid; place-items: center;
+  background: radial-gradient(circle at 30% 30%, rgba(123,240,61,.35), #0a0a0a 70%); }
+.project-placeholder i { font-size: 4.5rem; color: #7bf03d; }
+
+.details-btn { align-self: flex-start; margin-top: 1.2rem; background: none; border: 0; padding: 0;
+  color: #7bf03d; font-size: .9rem; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+
+.modal { position: fixed; inset: 0; z-index: 10001; display: grid; place-items: center; padding: 1.5rem;
+  background: rgba(0,0,0,.75); opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }
+.modal.open { opacity: 1; visibility: visible; }
+.modal-box { position: relative; max-width: 560px; width: 100%; max-height: 85vh; overflow-y: auto; color: #fff;
+  background: #101010; border: 1px solid rgba(123,240,61,.4); border-radius: 20px; padding: 2.2rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,.5); transform: translateY(16px); transition: transform .25s; }
+.modal.open .modal-box { transform: none; }
+.modal-box h3 { color: #7bf03d; margin-bottom: .4rem; font-size: 1.4rem; }
+.modal-box ul { margin: 1.2rem 0 1.6rem 1.4rem; line-height: 1.7; color: rgba(255,255,255,.85); }
+.modal-date { opacity: .7; margin-bottom: 1rem; }
+.modal-close { position: absolute; top: .6rem; right: 1rem; background: none; border: 0; color: #7bf03d; font-size: 2rem; cursor: pointer; }
+
+#Achievements { padding: 5vh 10vw 8vh; background-color: #080808; color: #fff; }
+.achievement-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.5rem; }
+.ach-card { text-align: center; padding: 2rem 1.5rem; background: rgba(15,15,15,.7); border: 1px solid rgba(123,240,61,.2); border-radius: 20px; }
+.ach-card i { font-size: 2.4rem; color: #7bf03d; }
+.ach-card h3 { font-size: 2.2rem; margin: .5rem 0; color: #fff; }
+.ach-card p { color: rgba(255,255,255,.75); line-height: 1.5; font-size: .95rem; }
+
+@media (prefers-reduced-motion: reduce) { .modal, .modal-box, .filter-chip { transition: none; } }
+
+/* Hero typed role (overrides the unused outline-text animation) */
+.home-info h2 span.typed { animation: none; color: #7bf03d; -webkit-text-stroke: 0; display: inline; }
+.home-info h2 span.typed::before { content: none; }
+.home-info h2 .cursor { color: #7bf03d; font-weight: 300; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.btn-alt { background: transparent; color: #7bf03d; margin-left: 12px; }
+.btn-alt:hover { background: #7bf03d; color: #000; }
+.home-info .btn-sci { flex-wrap: wrap; align-items: center; gap: .6rem 0; }
+
+/* About */
+#about { padding: 5vh 10vw 8vh; background-color: #101010; color: #fff; }
+.about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.about-card { background: rgba(15,15,15,.7); border: 1px solid rgba(123,240,61,.2); border-radius: 20px; padding: 2rem; transition: .3s; }
+.about-card:hover { transform: translateY(-5px); border-color: rgba(123,240,61,.4); }
+.about-card h3 { color: #7bf03d; display: flex; align-items: center; gap: .6rem; margin-bottom: 1rem; }
+.about-card p { line-height: 1.7; color: rgba(255,255,255,.85); margin-bottom: 1rem; }
+.about-sub { margin-top: 1.8rem; }
+.about-chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+.about-chips span { background: rgba(123,240,61,.1); color: #7bf03d; padding: .3rem .9rem; border-radius: 20px; font-size: .85rem; }
+.timeline-item { border-left: 2px solid #7bf03d; padding-left: 1rem; }
+.timeline-item p { margin: .3rem 0; }
+.timeline-item span { color: rgba(255,255,255,.65); font-size: .9rem; }
+.about-list { margin-left: 1.2rem; line-height: 1.8; color: rgba(255,255,255,.85); }
+
+/* Footer */
+.site-footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+  padding: 1.5rem 10vw; background: #000; color: rgba(255,255,255,.7); border-top: 1px solid rgba(123,240,61,.2); }
+.to-top { width: 40px; height: 40px; display: grid; place-items: center; border: 2px solid #7bf03d; border-radius: 50%; color: #7bf03d; font-size: 1.4rem; transition: .3s; }
+.to-top:hover { background: #7bf03d; color: #000; }
+html { scroll-behavior: smooth; }
